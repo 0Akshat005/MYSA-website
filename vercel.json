@@ -1,0 +1,18 @@
+{
+  "version": 2,
+  "name": "mysa-landing",
+  "public": true,
+  "headers": [
+    {
+      "source": "/(.*)",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "s-maxage=86400, stale-while-revalidate"
+        }
+      ]
+    }
+  ],
+  "cleanUrls": true,
+  "trailingSlash": false
+}

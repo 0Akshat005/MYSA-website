@@ -1,0 +1,224 @@
+.page {
+  padding-top: 140px;
+  padding-bottom: 120px;
+  min-height: 80vh;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding-left: 8%;
+  padding-right: 8%;
+  animation: floatUp 0.8s var(--ease) forwards;
+}
+
+.pageNarrow {
+  max-width: 800px;
+}
+
+.title {
+  font-size: clamp(36px, 5vw, 56px);
+  font-family: var(--font-display);
+  font-style: italic;
+  margin-bottom: 24px;
+  color: var(--brand-sage-dark);
+}
+
+.subtitle {
+  font-size: 18px;
+  color: var(--text-mist);
+  margin-bottom: 56px;
+  line-height: 1.6;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 32px;
+}
+
+.gridOneCol {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 48px;
+}
+
+.gridTwoCol {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 32px;
+}
+
+.card {
+  background: #fff;
+  padding: 40px;
+  border-radius: var(--radius-card);
+  box-shadow: var(--shadow-card);
+  transition: transform var(--duration) var(--ease), box-shadow var(--duration) var(--ease);
+}
+
+.card:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--shadow-hover);
+}
+
+.cardTopSage { border-top: 4px solid var(--brand-sage); }
+.cardTopInk { border-top: 4px solid var(--text-ink); }
+.cardTopGold { border-top: 4px solid var(--brand-gold); }
+
+.cardTitle {
+  font-size: 24px;
+  margin-bottom: 16px;
+  color: var(--text-ink);
+  font-family: var(--font-display);
+}
+
+.cardText {
+  color: var(--text-ink);
+  line-height: 1.7;
+}
+
+.textContent {
+  color: var(--text-ink);
+  line-height: 1.8;
+  font-size: 17px;
+}
+
+.textContent p {
+  margin-bottom: 24px;
+}
+
+.blockquote {
+  padding-left: 24px;
+  border-left: 4px solid var(--brand-gold);
+  font-style: italic;
+  font-size: 24px;
+  margin: 48px 0;
+  font-family: var(--font-display);
+  color: var(--brand-sage-dark);
+}
+
+.stepRow {
+  display: flex;
+  gap: 32px;
+  background: #fff;
+  padding: 40px;
+  border-radius: var(--radius-card);
+  box-shadow: var(--shadow-card);
+  transition: transform var(--duration) var(--ease), box-shadow var(--duration) var(--ease);
+}
+
+.stepRow:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--shadow-hover);
+}
+
+.stepNumber {
+  font-size: 48px;
+  font-family: var(--font-display);
+  font-style: italic;
+  color: var(--brand-gold);
+  line-height: 1;
+  flex-shrink: 0;
+}
+
+.formCard {
+  background: #fff;
+  padding: 48px;
+  border-radius: var(--radius-card);
+  box-shadow: var(--shadow-card);
+}
+
+.formGroup {
+  margin-bottom: 24px;
+}
+
+.label {
+  display: block;
+  margin-bottom: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--text-ink);
+}
+
+.input, .textarea {
+  width: 100%;
+  padding: 14px 16px;
+  border-radius: 12px;
+  border: 1px solid rgba(10, 54, 56, 0.15);
+  font-family: inherit;
+  font-size: 15px;
+  transition: border-color 0.2s, box-shadow 0.2s;
+  background: var(--bg-primary);
+}
+
+.input:focus, .textarea:focus {
+  outline: none;
+  border-color: var(--brand-sage);
+  box-shadow: 0 0 0 3px rgba(16, 117, 117, 0.1);
+}
+
+.textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+.contactLink {
+  display: inline-block;
+  color: var(--brand-sage);
+  font-weight: 600;
+  font-size: 16px;
+  margin-bottom: 8px;
+  transition: color 0.2s;
+}
+
+.contactLink:hover {
+  color: var(--brand-gold);
+}
+
+.priceDisplay {
+  font-size: 40px;
+  font-weight: bold;
+  color: var(--brand-gold);
+  margin-bottom: 24px;
+  font-family: var(--font-body);
+}
+
+.priceUnit {
+  font-size: 16px;
+  color: var(--text-mist);
+  font-weight: normal;
+}
+
+.featureList {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 32px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  color: var(--text-ink);
+}
+
+.featureItem {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 15px;
+}
+
+.featureIcon {
+  color: var(--brand-sage);
+  font-weight: bold;
+  background: rgba(16, 117, 117, 0.1);
+  width: 24px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  font-size: 12px;
+}
+
+@media (max-width: 768px) {
+  .gridTwoCol { grid-template-columns: 1fr; }
+  .stepRow { flex-direction: column; gap: 16px; padding: 24px; }
+  .formCard { padding: 32px 24px; }
+}
