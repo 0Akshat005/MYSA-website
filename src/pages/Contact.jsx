@@ -8,6 +8,19 @@ export default function Contact() {
 
   const handleSubmit = (e) => {
     e.preventDefault()
+    const msg = [
+      `Hi Mysa! I'd like to get in touch.`,
+      ``,
+      `*Name:* ${formData.name}`,
+      `*Email:* ${formData.email}`,
+      formData.phone ? `*Phone:* ${formData.phone}` : '',
+      formData.subject ? `*Subject:* ${formData.subject}` : '',
+      ``,
+      `*Message:*`,
+      formData.message
+    ].filter(Boolean).join('\n')
+    
+    window.open(`https://wa.me/917387517557?text=${encodeURIComponent(msg)}`, '_blank')
     setSubmitted(true)
   }
 
@@ -50,7 +63,7 @@ export default function Contact() {
             </div>
             <h3>Call Us</h3>
             <p>Available 7 days a week<br />8am – 8pm IST</p>
-            <a href="tel:+919272117557" className={styles.infoLink}>+91 92721 17557</a>
+            <a href="tel:+917387517557" className={styles.infoLink}>+91 73875 17557</a>
           </div>
 
           <div className={styles.infoCard}>
@@ -162,7 +175,7 @@ export default function Contact() {
             </div>
 
             <button type="submit" className={styles.submitBtn}>
-              Send Message
+              Send on WhatsApp
               <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
                 <path d="M5 12h14M12 5l7 7-7 7"/>
               </svg>

@@ -136,3 +136,78 @@ h1, h2, h3, h4 { font-family: var(--font-display); color: var(--text-ink); line-
 @media (max-width: 480px) {
   .section-padding { padding: 60px 5%; }
 }
+
+/* FLOATING WHATSAPP FAB */
+.whatsapp-fab {
+  position: fixed;
+  bottom: 28px;
+  right: 28px;
+  z-index: 9999;
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: #25D366;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow:
+    0 4px 14px rgba(37, 211, 102, 0.4),
+    0 0 0 0 rgba(37, 211, 102, 0.3);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  animation: waPulse 2.5s infinite;
+  text-decoration: none;
+}
+.whatsapp-fab:hover {
+  transform: scale(1.1);
+  box-shadow:
+    0 6px 20px rgba(37, 211, 102, 0.5),
+    0 0 0 0 rgba(37, 211, 102, 0);
+  animation: none;
+}
+.whatsapp-fab:active {
+  transform: scale(0.95);
+}
+
+/* Tooltip */
+.whatsapp-fab::before {
+  content: 'Chat with us';
+  position: absolute;
+  right: 68px;
+  top: 50%;
+  transform: translateY(-50%) translateX(8px);
+  background: rgba(10, 54, 56, 0.9);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  color: #fff;
+  font-family: var(--font-body);
+  font-size: 13px;
+  font-weight: 500;
+  padding: 8px 16px;
+  border-radius: 10px;
+  white-space: nowrap;
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+}
+.whatsapp-fab:hover::before {
+  opacity: 1;
+  transform: translateY(-50%) translateX(0);
+}
+
+@keyframes waPulse {
+  0% { box-shadow: 0 4px 14px rgba(37,211,102,0.4), 0 0 0 0 rgba(37,211,102,0.35); }
+  50% { box-shadow: 0 4px 14px rgba(37,211,102,0.4), 0 0 0 12px rgba(37,211,102,0); }
+  100% { box-shadow: 0 4px 14px rgba(37,211,102,0.4), 0 0 0 0 rgba(37,211,102,0); }
+}
+
+@media (max-width: 640px) {
+  .whatsapp-fab {
+    bottom: 20px;
+    right: 20px;
+    width: 50px;
+    height: 50px;
+  }
+  .whatsapp-fab svg { width: 24px; height: 24px; }
+  .whatsapp-fab::before { display: none; }
+}

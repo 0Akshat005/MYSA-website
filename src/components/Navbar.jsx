@@ -33,6 +33,7 @@ export default function Navbar({ openModal }) {
     { label: 'How It Works', to: '/how-it-works' },
     { label: 'Sustainability', to: '/sustainability' },
     { label: 'About', to: '/about' },
+    { label: 'Contact', to: '/contact' },
   ]
 
   return (
@@ -55,7 +56,6 @@ export default function Navbar({ openModal }) {
         </div>
 
         <div className={styles.navActions}>
-          <Link to="/contact" className={styles.ghostBtn}>Contact</Link>
           <button className="btn-primary" onClick={() => window.open('https://wa.me/917387517557?text=Hi%20Mysa!%20I%27d%20like%20to%20book%20a%20pickup%20for%20your%20premium%20steam%20ironing%20service.', '_blank')}>
             Book on WhatsApp
           </button>
@@ -77,7 +77,6 @@ export default function Navbar({ openModal }) {
             {l.label}
           </Link>
         ))}
-        <Link to="/contact" className={styles.mobileLink} style={{ transitionDelay: '0.48s' }}>Contact</Link>
         <button
           className={`btn-primary ${styles.mobileCta}`}
           style={{ transitionDelay: '0.56s' }}
