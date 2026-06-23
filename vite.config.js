@@ -5,7 +5,7 @@ export default defineConfig({
   plugins: [react()],
   server: {
     watch: {
-      ignored: ['**/*.mp4']
+      ignored: ['**/*.mp4', '**/*.zip']
     }
   }
 })
