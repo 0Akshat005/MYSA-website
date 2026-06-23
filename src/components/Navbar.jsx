@@ -56,9 +56,9 @@ export default function Navbar({ openModal }) {
         </div>
 
         <div className={styles.navActions}>
-          <button className="btn-primary" onClick={() => window.open('https://wa.me/917387517557?text=Hi%20Mysa!%20I%27d%20like%20to%20book%20a%20pickup%20for%20your%20premium%20steam%20ironing%20service.', '_blank')}>
+          <a href="https://wa.me/917387517557?text=Hi%20Mysa!%20I%27d%20like%20to%20book%20a%20pickup%20for%20your%20premium%20steam%20ironing%20service." target="_blank" rel="noopener noreferrer" className="btn-primary" style={{ display: 'inline-block', textAlign: 'center' }}>
             Book on WhatsApp
-          </button>
+          </a>
         </div>
 
         <button
@@ -77,13 +77,16 @@ export default function Navbar({ openModal }) {
             {l.label}
           </Link>
         ))}
-        <button
+        <a
+          href="https://wa.me/917387517557?text=Hi%20Mysa!%20I%27d%20like%20to%20book%20a%20pickup%20for%20your%20premium%20steam%20ironing%20service."
+          target="_blank"
+          rel="noopener noreferrer"
           className={`btn-primary ${styles.mobileCta}`}
-          style={{ transitionDelay: '0.56s' }}
-          onClick={() => { window.open('https://wa.me/917387517557?text=Hi%20Mysa!%20I%27d%20like%20to%20book%20a%20pickup%20for%20your%20premium%20steam%20ironing%20service.', '_blank'); toggleMobile() }}
+          style={{ transitionDelay: '0.56s', display: 'inline-block', textAlign: 'center' }}
+          onClick={toggleMobile}
         >
           Book on WhatsApp
-        </button>
+        </a>
       </div>
     </>
   )

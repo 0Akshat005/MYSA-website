@@ -19,9 +19,9 @@ export default function Footer({ openModal }) {
             </h2>
           </div>
           <div className={styles.ctaActions}>
-            <button className="btn-primary" onClick={() => window.open('https://wa.me/917387517557?text=Hi%20Mysa!%20I%27d%20like%20to%20book%20a%20pickup%20for%20your%20premium%20steam%20ironing%20service.', '_blank')}>
+            <a href="https://wa.me/917387517557?text=Hi%20Mysa!%20I%27d%20like%20to%20book%20a%20pickup%20for%20your%20premium%20steam%20ironing%20service." target="_blank" rel="noopener noreferrer" className="btn-primary" style={{ display: 'inline-block', textAlign: 'center' }}>
               Book on WhatsApp →
-            </button>
+            </a>
 
           </div>
         </div>

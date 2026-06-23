@@ -135,9 +135,9 @@ export default function Home({ openModal }) {
             </p>
           </RevealSection>
           <RevealSection delay="delay-3" className={styles.heroCta}>
-            <button className="btn-primary" onClick={() => window.open('https://wa.me/917387517557?text=Hi%20Mysa!%20I%27d%20like%20to%20book%20a%20pickup%20for%20your%20premium%20steam%20ironing%20service.', '_blank')}>
+            <a href="https://wa.me/917387517557?text=Hi%20Mysa!%20I%27d%20like%20to%20book%20a%20pickup%20for%20your%20premium%20steam%20ironing%20service." target="_blank" rel="noopener noreferrer" className="btn-primary" style={{ display: 'inline-flex', alignItems: 'center', justifyContent: 'center' }}>
               Book on WhatsApp
-            </button>
+            </a>
             <a href="#how" className={styles.linkArrow}>
               See how it works <span>→</span>
             </a>
@@ -252,7 +252,7 @@ export default function Home({ openModal }) {
               <button disabled style={{ opacity: 0.5, cursor: 'default' }}>Check Availability</button>
             )}
             {serviceStatus === 'serviceable' && (
-              <button onClick={() => window.open(`https://wa.me/917387517557?text=Hi%20Mysa!%20I%27d%20like%20to%20book%20a%20pickup%20for%20your%20premium%20steam%20ironing%20service.%20My%20postcode%20is%20${postcode}.`, '_blank')}>Book on WhatsApp →</button>
+              <a href={`https://wa.me/917387517557?text=Hi%20Mysa!%20I%27d%20like%20to%20book%20a%20pickup%20for%20your%20premium%20steam%20ironing%20service.%20My%20postcode%20is%20${postcode}.`} target="_blank" rel="noopener noreferrer" style={{ display: 'inline-flex', alignItems: 'center', justifyContent: 'center', textDecoration: 'none', background: 'var(--brand-sage)', color: 'white', padding: '12px 24px', borderRadius: 'var(--radius-pill)', fontWeight: 500, fontSize: '15px' }}>Book on WhatsApp →</a>
             )}
             {serviceStatus === 'not-serviceable' && (
               <button disabled style={{ background: '#ccc', cursor: 'default', color: '#666' }}>Not Available</button>
@@ -310,7 +310,7 @@ export default function Home({ openModal }) {
         <RevealSection>
           <h2>Your first pickup is on us.</h2>
           <p>No commitment. No signup fee. Just clean clothes.</p>
-          <button className="btn-white" onClick={() => window.open('https://wa.me/917387517557?text=Hi%20Mysa!%20I%27d%20like%20to%20book%20a%20pickup%20for%20your%20premium%20steam%20ironing%20service.', '_blank')}>Book on WhatsApp</button>
+          <a href="https://wa.me/917387517557?text=Hi%20Mysa!%20I%27d%20like%20to%20book%20a%20pickup%20for%20your%20premium%20steam%20ironing%20service." target="_blank" rel="noopener noreferrer" className="btn-white" style={{ display: 'inline-flex', alignItems: 'center', justifyContent: 'center' }}>Book on WhatsApp</a>
         </RevealSection>
       </section>
 
