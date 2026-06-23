@@ -66,7 +66,6 @@ export default function Footer({ openModal }) {
           <h4 className={styles.colTitle}>Company</h4>
           <ul className={styles.colList}>
             <li><Link to="/about">About Us</Link></li>
-            <li><Link to="/sustainability">Sustainability</Link></li>
             <li><Link to="/how-it-works">How It Works</Link></li>
             <li><Link to="/contact">Careers</Link></li>
           </ul>

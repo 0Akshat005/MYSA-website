@@ -9,7 +9,6 @@ import { useState, useEffect } from 'react'
 import Home from './pages/Home'
 import Services from './pages/Services'
 import HowItWorks from './pages/HowItWorks'
-import Sustainability from './pages/Sustainability'
 import Contact from './pages/Contact'
 import About from './pages/About'
 
@@ -46,7 +45,6 @@ function AppInner() {
           <Route path="/" element={<Home openModal={openModal} />} />
           <Route path="/services" element={<Services openModal={openModal} />} />
           <Route path="/how-it-works" element={<HowItWorks />} />
-          <Route path="/sustainability" element={<Sustainability />} />
           <Route path="/about" element={<About />} />
           <Route path="/contact" element={<Contact />} />
         </Routes>
